@@ -15,8 +15,16 @@ Create a simple calendar application that allows a user to save events for each 
 ## Configuration
 
 <!-- ----------------------- -->
+Saves data entered in feilds when the save button gets selected so when the user refreashes
+the page the data is either saved or not depenind if the button was used. 
+
 
 ## Troubleshooting
+I had turned this in incomplete due to being behind. Life happens(family member was sent to the ICU)
+I had time to think and reflect and instead of storing the data individually I grouped the data and had it 
+recall all of them at once to minimize the lines and lines of code.
+Syntax still very tricky.
+
 
 <!-- ----------------------- -->
 Git hub servers where down, the git add . and the git push couldnt be updated with changed
