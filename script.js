@@ -1,7 +1,7 @@
 // Need time blocks
 // Load the html and css files first then JS
 $(document).ready(function () {
-  $("currentDay").text(moment().format("Do MMM YYYY, h:mm:ss a"));
+  $(".currentDay").text(moment().format("Do MMM YYYY, h:mm:ss a"));
 
   // save button
   $("button").on("click", function () {
@@ -9,6 +9,7 @@ $(document).ready(function () {
     localStorage.setItem(this.id, text);
   });
 
+  // loads
   function load() {
     $(this).siblings(".description").val(localStorage.getItem(this.id));
   }
@@ -17,39 +18,22 @@ $(document).ready(function () {
 
 // To Do
 // -Change color (past present future)
-// current day at top
-function timeColor (){
-    $("time-block").each(time);
-}
+// // current day at top
+// function changeColor() {
+//   let time = moment().format("H:mm:ss a");
 
-function time() {
-  $(".time-block").each(function () {
-    var blockHour = parseInt($(this).attr("id").replace("hour-", ""));
-    var hours = parseInt(moment().format("H"));
-    if (hours >= 9 && hours <= 17) {
-      $(this).addClass("present");
-    } else if (hours < 9) {
-      $(this).addClass("past");
-    } else {
-      $(this).addClass("future");
-    }
-  });
-}
+//   $("time-block").each(function () {
+//     let timeBlock = parseInt($(this).attr("id"));
 
-
-
-
-function saveUserInput(event) {
-    var textAreaId = $(this).parseInt().attr("id");
-  
-    localStorage.setItem(
-      moment().format("DDDYYYY") + textAreaId,
-      $("#" + hourId + " textarea").val()
-    );
-  }
-
-function input ()
-
-
-// var blockHour = parseInt($(this).attr("id").replace("hour-", ""));
-// var currentHour = parseInt(moment().format("H"));
+//     if (timeBlock < currentHour) {
+//       $(this).addClass("past");
+//       $(this).addClass("present");
+//       $(this).addClass("future");
+//     } else if (timeBlock === currentHour) {
+//       $(this).addClass("past");
+//       $(this).addClass("present");
+//       $(this).addClass("future");
+//     }
+//   });
+// }
+changeColor();
