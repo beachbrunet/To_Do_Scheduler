@@ -35,7 +35,7 @@ THEN the saved events persist
 
 <!-- ----------------------- -->
 
-![Screen Shot]()
+![Screen Shot](/assets/ScreenShot.png)
 
 ## Technologies
 
