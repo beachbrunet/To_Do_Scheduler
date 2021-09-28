@@ -18,17 +18,38 @@ $(document).ready(function () {
 // To Do
 // -Change color (past present future)
 // current day at top
-// function timeColor (){
-
-// };
-function colorChange() {
-  var colorDate = new Date();
-  var hours = objDate.getHours();
-  if (hours >= 9 && hours <= 17) {
-    $(".hour").addClass("present");
-  } else if (hours < 9) {
-    $(".hour").addClass("past");
-  } else {
-    $(".hour").addClass("future");
-  }
+function timeColor (){
+    $("time-block").each(time);
 }
+
+function time() {
+  $(".time-block").each(function () {
+    var blockHour = parseInt($(this).attr("id").replace("hour-", ""));
+    var hours = parseInt(moment().format("H"));
+    if (hours >= 9 && hours <= 17) {
+      $(this).addClass("present");
+    } else if (hours < 9) {
+      $(this).addClass("past");
+    } else {
+      $(this).addClass("future");
+    }
+  });
+}
+
+
+
+
+function saveUserInput(event) {
+    var textAreaId = $(this).parseInt().attr("id");
+  
+    localStorage.setItem(
+      moment().format("DDDYYYY") + textAreaId,
+      $("#" + hourId + " textarea").val()
+    );
+  }
+
+function input ()
+
+
+// var blockHour = parseInt($(this).attr("id").replace("hour-", ""));
+// var currentHour = parseInt(moment().format("H"));
