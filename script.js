@@ -15,3 +15,4 @@ $(document).ready(function() {
     }
     $("button").each(load)
 })
+
